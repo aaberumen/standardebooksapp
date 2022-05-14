@@ -1,0 +1,57 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.17_2/libexec/bin/yarn.js install
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/andreaberumen/.local/bin:/Users/andreaberumen/.local/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.17.6
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: Client network socket disconnected before secure TLS connection was established
+      at connResetException (internal/errors.js:628:14)
+      at TLSSocket.onConnectEnd (_tls_wrap.js:1569:19)
+      at TLSSocket.emit (events.js:412:35)
+      at endReadableNT (internal/streams/readable.js:1317:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest: 
+  {
+    "name": "biblioteca",
+    "version": "1.0.0",
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "expo": "~45.0.0",
+      "expo-status-bar": "~1.3.0",
+      "react": "17.0.2",
+      "react-dom": "17.0.2",
+      "react-native": "0.68.2",
+      "react-native-web": "0.17.7"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.12.9",
+      "@types/react": "~17.0.21",
+      "@types/react-native": "~0.66.13",
+      "typescript": "~4.3.5"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
