@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   bookCard: {
     flex: 1,
     backgroundColor: '#f2f2f2',
+    color: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
   },
