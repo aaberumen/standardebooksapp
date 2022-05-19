@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighlight, Linking } from 'react-native';
+import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighlight, Linking, Pressable } from 'react-native';
 import '../src/App.css';
 
 const BookCard = (props) => {
@@ -20,12 +20,16 @@ export default function Home({navigation}) {
       <View style={styles.header}>
 
       <Text style={styles.h1}>Home</Text>
-      <Image
-            source={{
-              uri:'https://reactnative.dev/docs/assets/p_cat2.png',
-            }}
-            style={styles.pfp}
-          />
+      <Pressable style={[styles.boton]}
+          onPress={() => navigation.navigate('Profile')}>
+          <Image
+                source={{
+                  uri:'https://reactnative.dev/docs/assets/p_cat2.png',
+                }}
+                style={styles.pfp}
+              />
+      </Pressable>
+
       </View>
      <ScrollView style={styles.body}>
      <View style={styles.quoteCard}>
@@ -79,7 +83,7 @@ const styles = StyleSheet.create({
     padding:20,
   },
   h1: {
-    fontSize:25,
+    fontSize:35,
     fontFamily: 'Ohno',
   },
 h2: {
@@ -93,7 +97,7 @@ h2: {
       padding: 20,
     },
   quoteCard: {
-    backgroundColor: 'lightblue',
+    backgroundColor: '#50b9e1',
     justifyContent: 'center',
     alignSelf: 'center',
     padding:20,
@@ -118,11 +122,8 @@ text: {
   fontFamily:'Inter',
 },
   logo: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  
   box: {
     width: 50,
     height: 50,

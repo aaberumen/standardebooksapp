@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Search from './Ventanas/Search';
 import Log_In from './Ventanas/Log_In';
 import Sign_Up from './Ventanas/Sign_Up';
 import Home from './Ventanas/Home';
@@ -31,7 +32,7 @@ function MyTabs() {
       style={{ backgroundColor: 'tomato' }}
     >
       <Tab.Screen
-        name="Log_In"
+        name="Home"
         component={Home}
         options={{
           tabBarLabel: 'Home',
@@ -41,8 +42,8 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Sign_Up"
-        component={Sign_Up}
+        name="Search"
+        component={Search}
         options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color }) => (

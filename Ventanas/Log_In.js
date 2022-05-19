@@ -1,12 +1,9 @@
 import { StyleSheet, View, Image, Text, TextInput } from 'react-native';
 import { Pressable } from 'react-native';
-import { Component } from 'react/cjs/react.production.min';
 import { Linking } from 'react-native';
+import { Component } from 'react/cjs/react.production.min';
 import Sign_Up from './Sign_Up';
 import '../src/App.css';
-
-
-
 
 export default function Log_In({ navigation }) {
     return (
@@ -15,7 +12,7 @@ export default function Log_In({ navigation }) {
             <TextInput placeholder="  Username or Email" style={styles.text} />
             <TextInput placeholder="  Password" secureTextEntry={true} style={styles.text} />
             <Pressable style={[styles.boton]}
-                onPress={() => navigation.navigate("Profile")}>
+                onPress={() => navigation.navigate('Home')}>
                 <Text style={[styles.botonText]}>Log In</Text>
             </Pressable>
             <Text style={styles.linkText}
@@ -27,7 +24,6 @@ export default function Log_In({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-
 
     container: {
         flex: 1,
@@ -57,10 +53,10 @@ const styles = StyleSheet.create({
         width: '50%',
         flexDirection: 'row',
         borderRadius: 20,
+        borderWidth: 2,
         backgroundColor: '#FA784A',
         justifyContent: 'center',
         marginTop: 80, //MASMARGENJEJEJ
-        borderWidth: 2,
     },
     botonText: {
         fontSize: 18,
