@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter'), url(./fonts/Inter-VariableFont_slnt\,wght.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Ohno';
+    src: local('Ohno'), url(./fonts/OhnoBlazeface-12Point.ttf) format('truetype');
+  }
