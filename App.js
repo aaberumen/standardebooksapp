@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, Linking } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -8,8 +8,7 @@ import Log_In from './Ventanas/Log_In';
 import Sign_Up from './Ventanas/Sign_Up';
 import Home from './Ventanas/Home';
 import { render } from 'react-dom';
-import { Linking } from 'react-native';
-import './src/App.css';
+//import './src/App.css';
 
 function Profile({ navigation }) {
   return (

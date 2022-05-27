@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighlight, Linking, Pressable } from 'react-native';
-import '../src/App.css';
+import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighlight, Linking, Pressable, TextInput} from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const CategoryCard = (props) => {
   return (
-    <View>
-    <Image source={{ uri:'https://reactnative.dev/docs/assets/p_cat2.png'}} style={{ width: 200, height: 200 }} />
+    <View style={styles.categories}>
+    <Image source={{ uri:'https://reactnative.dev/docs/assets/p_cat2.png'}} style={{ width: 150, height: 200 }} />
      <Text style={styles.text}> {props.name}</Text>
     </View>
   );
@@ -17,10 +17,11 @@ export default function Search({navigation}) {
   <SafeAreaView  style={styles.container}>
       <View style={styles.header}>
       <Text style={styles.h1}>Search</Text>
+      <TextInput placeholder="Search" style={styles.text} />
+        <MaterialCommunityIcons name="home" color={"green"} size={26} />
       </View>
-     <ScrollView style={styles.body}>
+     <ScrollView style={styles.scrollView} contentContainerStyle={styles.body}>
      <Text style={styles.h2}>Categories</Text>
-     <View style={styles.categories}>
      <CategoryCard />
      <CategoryCard />
      <CategoryCard />
@@ -29,8 +30,6 @@ export default function Search({navigation}) {
      <CategoryCard />
      <CategoryCard />
      <CategoryCard />
-     </View>
-
      </ScrollView>
      <StatusBar style="auto" />
 
@@ -56,6 +55,15 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     padding:20,
   },
+  scrollView:{
+
+  },
+  contentContainerStyle: {
+
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   h1: {
     fontSize:35,
     fontFamily: 'Ohno',
@@ -69,22 +77,19 @@ h2: {
 },
     body: {
       padding: 20,
+        flex: 1,
+          flexDirection:"row",
+            flexWrap:"wrap",
     },
   categories: {
-    flex:1,
-    flexDirection:"row",
-    flexWrap:"wrap",
     justifyContent:"center",
   },
     bookCard: {
       flex:1,
       flexDirection:"column",
     },
-    scroll: {
-      flex: 1,
+    scrollView: {
       backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
     },
 text: {
   fontSize:14,

@@ -1,12 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighlight, Linking, Pressable } from 'react-native';
-import '../src/App.css';
 
 const BookCard = (props) => {
   return (
-    <View>
-    <Image source={{ uri:'https://reactnative.dev/docs/assets/p_cat2.png'}} style={{ width: 200, height: 200 }} />
-     <Text style={styles.text}> {props.title}</Text>
+    <View style={styles.bookCard}>
+    <Image source={props.img} style={{ width: 150, height: 203 }} />
+     <Text style={styles.h3}> {props.title}</Text>
      <Text style={styles.text}> {props.author}</Text>
      <Text style={styles.text}> {props.year}</Text>
     </View>
@@ -31,7 +30,7 @@ export default function Home({navigation}) {
       </Pressable>
 
       </View>
-     <ScrollView style={styles.body}>
+     <ScrollView style={styles.scrollView} contentContainerStyle={styles.body} >
      <View style={styles.quoteCard}>
      <Text style={styles.text}>Daily Quote</Text>
      <Text style={styles.text}>"Be yourself, everyone else is already taken."</Text>
@@ -39,21 +38,20 @@ export default function Home({navigation}) {
      </View>
      <Text style={styles.h2}>Recommended</Text>
      <View>
-     <ScrollView horizontal="true">
-     <BookCard title="Maru" author="Jonathan Pageau" year="1850" />
-     <BookCard title="The One" author="Jude Potter" year="1980" />
-     <BookCard title="Moby Dick" author="Jean Peter" year="1666" />
-     <BookCard title="Killer Whale" author="Jon Pepper" year="2021" />
+     <ScrollView nestedScrollEnabled={true} horizontal={true}>
+     <BookCard img={require('../src/imgs/L1.png')} title="Maru" author="Jonathan Pageau" year="1850" />
+     <BookCard img={require('../src/imgs/L2.png')} title="The One" author="Jude Potter" year="1980" />
+     <BookCard img={require('../src/imgs/L3.png')} title="Moby Dick" author="Jean Peter" year="1666" />
      </ScrollView>
      </View>
 
      <Text style={styles.h2}>New Releases</Text>
      <View>
-     <ScrollView horizontal="true">
-     <BookCard title="Maru" author="Jonathan Pageau" year="1850" />
-     <BookCard title="The One" author="Jude Potter" year="1980" />
-     <BookCard title="Moby Dick" author="Jean Peter" year="1666" />
-     <BookCard title="Killer Whale" author="Jon Pepper" year="2021" />
+     <ScrollView nestedScrollEnabled={true} horizontal={true}>
+     <BookCard img={require('../src/imgs/L6.png')} title="Maru" author="Jonathan Pageau" year="1850" />
+     <BookCard img={require('../src/imgs/L7.png')} title="The One" author="Jude Potter" year="1980" />
+     <BookCard img={require('../src/imgs/L8.png')} title="Moby Dick" author="Jean Peter" year="1666" />
+     <BookCard img={require('../src/imgs/L9.png')} title="Killer Whale" author="Jon Pepper" year="2021" />
      </ScrollView>
      </View>
 
@@ -93,6 +91,14 @@ h2: {
   paddingBottom:20,
   fontFamily:'Inter',
 },
+
+h3: {
+fontSize:17,
+fontWeight:"bold",
+paddingTop:10,
+paddingBottom:2,
+fontFamily:'Inter',
+},
     body: {
       padding: 20,
     },
@@ -108,8 +114,12 @@ h2: {
     bookCard: {
       flex:1,
       flexDirection:"column",
+      paddingRight:20,
     },
-    scroll: {
+    scrollView:{
+
+    },
+    contentContainerStyle: {
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
@@ -120,10 +130,11 @@ text: {
   alignItems: 'center',
   justifyContent: 'center',
   fontFamily:'Inter',
+  paddingBottom:2,
 },
   logo: {
   },
-  
+
   box: {
     width: 50,
     height: 50,

@@ -3,7 +3,6 @@ import { Pressable } from 'react-native';
 import { Linking } from 'react-native';
 import { Component } from 'react/cjs/react.production.min';
 import Sign_Up from './Sign_Up';
-import '../src/App.css';
 
 export default function Log_In({ navigation }) {
     return (
