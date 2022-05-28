@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 const CategoryCard = (props) => {
   return (
     <View style={styles.categories}>
-    <Image source={{ uri:'https://reactnative.dev/docs/assets/p_cat2.png'}} style={{ width: 150, height: 200 }} />
+    <Image source={props.img} style={{ width: 150, height: 203 }} />
      <Text style={styles.text}> {props.name}</Text>
     </View>
   );
@@ -17,19 +17,21 @@ export default function Search({navigation}) {
   <SafeAreaView  style={styles.container}>
       <View style={styles.header}>
       <Text style={styles.h1}>Search</Text>
-      <TextInput placeholder="Search" style={styles.text} />
-        <MaterialCommunityIcons name="home" color={"green"} size={26} />
+      <View style={styles.inputBox}>
+        <MaterialCommunityIcons name="magnify" color={"black"} size={26} />
+        <TextInput placeholder= "Search" />
       </View>
-     <ScrollView style={styles.scrollView} contentContainerStyle={styles.body}>
+      </View>
+     <ScrollView style={styles.scrollView} contentContainerStyle={styles.contentContainerStyle}>
      <Text style={styles.h2}>Categories</Text>
-     <CategoryCard />
-     <CategoryCard />
-     <CategoryCard />
-     <CategoryCard />
-     <CategoryCard />
-     <CategoryCard />
-     <CategoryCard />
-     <CategoryCard />
+     <View style={styles.body} >
+     <CategoryCard  img={require('../src/imgs/Classics.png')} />
+     <CategoryCard  img={require('../src/imgs/Fantasy.png')} />
+     <CategoryCard  img={require('../src/imgs/Fiction.png')} />
+     <CategoryCard  img={require('../src/imgs/Horror.png')} />
+     <CategoryCard  img={require('../src/imgs/Mistery.png')} />
+     <CategoryCard  img={require('../src/imgs/Romance.png')} />
+     </View>
      </ScrollView>
      <StatusBar style="auto" />
 
@@ -50,19 +52,15 @@ const styles = StyleSheet.create({
     borderWidth:3,
   },
   header: {
-    flexDirection: "row",
-    alignItems: 'center',
-    justifyContent: 'flex-start',
     padding:20,
   },
   scrollView:{
 
   },
   contentContainerStyle: {
-
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+      padding: 20,
   },
   h1: {
     fontSize:35,
@@ -75,14 +73,28 @@ h2: {
   paddingBottom:20,
   fontFamily:'Inter',
 },
+inputBox:{
+  fontSize: 18,
+  padding: 12,
+  backgroundColor: 'white',
+  marginBottom: 10,
+  marginTop: 20,
+  borderWidth: 2,
+  borderRadius: 20,
+  width: "80%", //JEJE
+  fontFamily: 'Inter',
+  width:"100%",
+  flexDirection:"row",
+},
     body: {
-      padding: 20,
         flex: 1,
           flexDirection:"row",
             flexWrap:"wrap",
+            justifyContent: 'center',
     },
   categories: {
     justifyContent:"center",
+    padding:10,
   },
     bookCard: {
       flex:1,

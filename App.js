@@ -18,8 +18,6 @@ function Profile({ navigation }) {
   );
 }
 
-
-
 const Tab = createMaterialBottomTabNavigator();
 
 function MyTabs() {
@@ -28,7 +26,7 @@ function MyTabs() {
       initialRouteName="Home"
       activeColor="#fafafa"
       labelStyle={{ fontSize: 12 }}
-      style={{ backgroundColor: 'tomato' }}
+      barStyle={{ backgroundColor: '#50B9E1', paddingTop: 15 }}
     >
       <Tab.Screen
         name="Home"
@@ -69,5 +67,8 @@ export default function App() {
     <NavigationContainer>
       <MyTabs />
     </NavigationContainer>
+
   );
+
+
 }

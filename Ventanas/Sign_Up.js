@@ -8,8 +8,8 @@ export default function Sign_Up({ navigation }) {
     return (
         <View style={styles.container}>
             <Text style={styles.titleText}>Standard Ebooks.</Text>
-            <TextInput placeholder="  Name " style={styles.text} />
-            <TextInput placeholder="  Email" style={styles.text} />
+            <TextInput placeholder="  Name " style={styles.inputBox} />
+            <TextInput placeholder="  Email" style={styles.inputBox} />
             <TextInput placeholder="  Password" secureTextEntry={true} style={styles.text} />
 
             <div className="topping" width="80%">
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         marginBottom: 80, //MARGEN TITULO
         fontFamily: 'Ohno',
     },
-    text: {
+    inputBox: {
         fontSize: 18,
         padding: 12,
         backgroundColor: 'white',
