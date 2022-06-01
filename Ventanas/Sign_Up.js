@@ -1,8 +1,7 @@
-import { StyleSheet, View, Image, Text, TextInput } from 'react-native';
-import { Pressable } from 'react-native';
-import { Linking } from 'react-native';
-
-
+import { StyleSheet, View, Image, Text, TextInput, Pressable, Linking } from 'react-native';
+import BouncyCheckbox from "react-native-bouncy-checkbox";
+import Log_In from './Log_In';
+import Home from './Home';
 
 export default function Sign_Up({ navigation }) {
     return (
@@ -10,25 +9,32 @@ export default function Sign_Up({ navigation }) {
             <Text style={styles.titleText}>Standard Ebooks.</Text>
             <TextInput placeholder="  Name " style={styles.inputBox} />
             <TextInput placeholder="  Email" style={styles.inputBox} />
-            <TextInput placeholder="  Password" secureTextEntry={true} style={styles.text} />
+            <TextInput placeholder="  Password" secureTextEntry={true} style={styles.inputBox} />
 
-            <div className="topping" width="80%">
-                <input type="checkbox" id="topping" name="topping"
-                    value="Paneer"/>
-                <Text style={styles.linkText} >
-                I want to receive news and offers
-            </Text>
-            </div>
+            <View style={styles.checkboxContainer}>
+
+            <BouncyCheckbox
+  size={25}
+  fillColor="#50b9e1"
+  unfillColor="#fafafa"
+  text="I want to receive news and offers"
+  textStyle={{fontSize: 12, alignSelf:"center", textDecorationLine: "none", color:"black"}}
+  iconStyle={{ borderColor: "grey" }}
+  onPress={(isChecked: boolean) => {}}
+/>
+
+            </View>
 
             <Text style={styles.linkText}>
                 By creating an account you are agreeing our Terms and Services policies.
             </Text>
             <Pressable style={[styles.boton]}
-                onPress={() => navigation.navigate('Profile')}>
+                onPress={() => navigation.navigate('Home')}>
                 <Text style={[styles.botonText]}>Create Account</Text>
             </Pressable>
             <Text style={styles.linkText}
-                onPress={() => navigation.navigate('Log_In')}>
+                onPress={() => navigation.navigate('Log In')}
+                >
                 Already have an account? Log In
             </Text>
         </View>
@@ -66,7 +72,7 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         backgroundColor: '#50B9E1',
         justifyContent: 'center',
-        marginTop: 80, //MASMARGENJEJEJ
+        marginTop: 50, //MASMARGENJEJEJ
         borderWidth: 2,
     },
     botonText: {
@@ -74,7 +80,7 @@ const styles = StyleSheet.create({
         lineHeight: 40,
         textAlign: 'center',
         color: 'black',
-        fontWeight: 'bold',
+        fontFamily: 'Inter-Bold',
     },
     linkText:
     {
@@ -83,5 +89,13 @@ const styles = StyleSheet.create({
         fontSize: 12,
         width: '80%',
         marginTop: 20,
+
     },
+    checkboxContainer: {
+  flexDirection: "row",
+  marginBottom: 20,
+},
+checkbox: {
+  alignSelf: "center",
+},
 });

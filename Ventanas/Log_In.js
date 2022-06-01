@@ -1,6 +1,4 @@
-import { StyleSheet, View, Image, Text, TextInput } from 'react-native';
-import { Pressable } from 'react-native';
-import { Linking } from 'react-native';
+import { StyleSheet, View, Image, Text, TextInput, Pressable, Linking } from 'react-native';
 import { Component } from 'react/cjs/react.production.min';
 import Sign_Up from './Sign_Up';
 
@@ -15,7 +13,7 @@ export default function Log_In({ navigation }) {
                 <Text style={[styles.botonText]}>Log In</Text>
             </Pressable>
             <Text style={styles.linkText}
-                onPress={() => navigation.navigate('Sign_Up')}>
+                onPress={() => navigation.navigate('Sign Up')}>
                 Forgot your password? | Create an account
             </Text>
         </View>
@@ -62,7 +60,7 @@ const styles = StyleSheet.create({
         lineHeight: 40,
         textAlign: 'center',
         color: 'black',
-        fontWeight: 'bold',
+        fontFamily: 'Inter-Bold',
     },
     linkText:
     {

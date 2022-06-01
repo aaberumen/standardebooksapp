@@ -1,16 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighlight, Linking, Pressable } from 'react-native';
-
-const BookCard = (props) => {
-  return (
-    <View style={styles.bookCard}>
-    <Image source={props.img} style={{ width: 150, height: 203 }} />
-     <Text style={styles.h3}> {props.title}</Text>
-     <Text style={styles.text}> {props.author}</Text>
-     <Text style={styles.text}> {props.year}</Text>
-    </View>
-  );
-}
+import { BookCard } from '../Ventanas/BookCard';
+import Log_In from './Log_In';
 
 export default function Home({navigation}) {
   return (
@@ -20,11 +11,9 @@ export default function Home({navigation}) {
 
       <Text style={styles.h1}>Home</Text>
       <Pressable style={[styles.boton]}
-          onPress={() => navigation.navigate('Profile')}>
+          onPress={() => navigation.navigate('Log In')}>
           <Image
-                source={{
-                  uri:'https://reactnative.dev/docs/assets/p_cat2.png',
-                }}
+                source={require('../src/imgs/UserPFP.jpg')}
                 style={styles.pfp}
               />
       </Pressable>
@@ -86,18 +75,16 @@ const styles = StyleSheet.create({
   },
 h2: {
   fontSize:20,
-  fontWeight:"bold",
   paddingTop:20,
   paddingBottom:20,
-  fontFamily:'Inter',
+  fontFamily:'Inter-Bold',
 },
 
 h3: {
 fontSize:17,
-fontWeight:"bold",
 paddingTop:10,
 paddingBottom:2,
-fontFamily:'Inter',
+fontFamily:'Inter-Bold',
 },
     body: {
       padding: 20,
