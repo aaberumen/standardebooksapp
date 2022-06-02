@@ -1,6 +1,6 @@
 import { StyleSheet, View, Image, Text, TextInput, Pressable, Linking } from 'react-native';
 import { Component } from 'react/cjs/react.production.min';
-import Sign_Up from './Sign_Up';
+
 
 export default function Log_In({ navigation }) {
     return (

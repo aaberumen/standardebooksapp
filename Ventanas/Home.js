@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighlight, Linking, Pressable } from 'react-native';
 import { BookCard } from '../Ventanas/BookCard';
-import Log_In from './Log_In';
+//import Log_In from './Log_In';
 
 export default function Home({navigation}) {
   return (

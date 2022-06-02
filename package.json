@@ -31,7 +31,9 @@
     "react-native-web": "0.17.7",
     "react-navigation-stack": "^2.10.4",
     "svgo": "^2.8.0",
-    "uuid": "^7.0.3"
+    "uuid": "^7.0.3",
+    "webpack-dev-server": "~3.11.0",
+    "@expo/webpack-config": "~0.16.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
