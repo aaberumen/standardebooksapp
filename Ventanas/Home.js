@@ -3,8 +3,10 @@ import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighl
 import { BookCard } from '../Ventanas/BookCard';
 //import Log_In from './Log_In';
 
+
 export default function Home({navigation}) {
   return (
+
 
   <SafeAreaView  style={styles.container}>
       <View style={styles.header}>
