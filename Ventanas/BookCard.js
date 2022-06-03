@@ -4,7 +4,9 @@ import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighl
 export const BookCard = (props) => {
   return (
     <View style={styles.bookCard}>
+      <Pressable onPress={props.nav}>
     <Image source={props.img} style={{ width: 150, height: 203 }} />
+    </Pressable>
     <View style ={styles.textWrap}>
      <Text style={styles.h3}> {props.title}</Text>
      <Text style={styles.text}> {props.author}</Text>
