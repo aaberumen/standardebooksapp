@@ -30,19 +30,19 @@ export default function Home({navigation}) {
      <Text style={styles.h2}>Recommended</Text>
      <View>
      <ScrollView nestedScrollEnabled={true} horizontal={true}>
-     <BookCard img={require('../src/imgs/L1.png')} title="Maru" author="Jonathan Pageau" year="1850" />
-     <BookCard img={require('../src/imgs/L2.png')} title="The One" author="Jude Potter" year="1980" />
-     <BookCard img={require('../src/imgs/L3.png')} title="Moby Dick" author="Jean Peter" year="1666" />
+     <BookCard img={require('../src/imgs/L1.png')} title="The Picture of Dorian Grey" author="Oscar Wilde" year="1890" />
+     <BookCard img={require('../src/imgs/L2.png')} title="Metamorphosis" author="Franz Kakfa" year="1915" />
+     <BookCard img={require('../src/imgs/L3.png')} title="The Other Black Girl" author="Zayika D. Harris Peter" year="2021" />
      </ScrollView>
      </View>
 
      <Text style={styles.h2}>New Releases</Text>
      <View>
      <ScrollView nestedScrollEnabled={true} horizontal={true}>
-     <BookCard img={require('../src/imgs/L6.png')} title="Maru" author="Jonathan Pageau" year="1850" />
-     <BookCard img={require('../src/imgs/L7.png')} title="The One" author="Jude Potter" year="1980" />
-     <BookCard img={require('../src/imgs/L8.png')} title="Moby Dick" author="Jean Peter" year="1666" />
-     <BookCard img={require('../src/imgs/L9.png')} title="Killer Whale" author="Jon Pepper" year="2021" />
+     <BookCard img={require('../src/imgs/L6.png')} title="Atomic Habits" author="James Clear" year="2018" />
+     <BookCard img={require('../src/imgs/L7.png')} title="Donde los Árboles Cantan" author="Laura Gallego" year="2011" />
+     <BookCard img={require('../src/imgs/L8.png')} title="Little Women" author="Louisa May Alcott" year="1868" />
+     <BookCard img={require('../src/imgs/L9.png')} title="Pride and Prejudice" author="Jane Austen" year="1813" />
      </ScrollView>
      </View>
 

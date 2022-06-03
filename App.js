@@ -9,6 +9,7 @@ import Log_In from './Ventanas/Log_In';
 import Sign_Up from './Ventanas/Sign_Up';
 import Home from './Ventanas/Home';
 import MyBooks from './Ventanas/MyBooks';
+import Fiction from './Ventanas/Fiction';
 import { render } from 'react-dom';
 import * as Font from "expo-font";
 import * as SplashScreen from 'expo-splash-screen';
@@ -71,8 +72,8 @@ function TabBar()  {
         }}
       />
       <Tab.Screen
-        name="Search"
-        component={Search}
+        name="SearchStack"
+        component={SearchStack}
         options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color }) => (
@@ -106,13 +107,23 @@ function HomeStack() {
         <Stack.Screen name="Log In" component={Log_In} />
         <Stack.Screen name="Sign Up" component={Sign_Up} />
       </Stack.Navigator>
-
       )
+}
+
+
+function SearchStack() {
+  return (
+
+      <Stack.Navigator initialRouteName="Search">
+        <Stack.Screen options={{headerShown: false}} name="Search" component={Search} />
+        <Stack.Screen name="Fiction" component={Fiction} />
+      </Stack.Navigator>
+  );
 }
 
 function MyBooksStack() {
   return (
-    
+
       <Stack.Navigator initialRouteName="MyBooks">
         <Stack.Screen options={{headerShown: false}} name="My Books" component={MyBooks} />
         <Stack.Screen name="Log In" component={Log_In} />
@@ -132,5 +143,3 @@ const fetchFonts = () => {
     'Ohno': require('./src/fonts/OhnoBlazeface-12Point.ttf')
   });
 };
-
-

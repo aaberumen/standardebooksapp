@@ -4,8 +4,10 @@ import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighl
 export const CategoryCard = (props) => {
   return (
     <View style={styles.categories}>
+    <Pressable onPress={props.nav}>
     <Image source={props.img} style={{ width: 150, height: 203 }} />
      <Text style={styles.text}> {props.name}</Text>
+     </Pressable>
     </View>
   );
   }

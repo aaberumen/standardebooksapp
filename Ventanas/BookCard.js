@@ -5,9 +5,11 @@ export const BookCard = (props) => {
   return (
     <View style={styles.bookCard}>
     <Image source={props.img} style={{ width: 150, height: 203 }} />
+    <View style ={styles.textWrap}>
      <Text style={styles.h3}> {props.title}</Text>
      <Text style={styles.text}> {props.author}</Text>
      <Text style={styles.text}> {props.year}</Text>
+    </View>
     </View>
   );
 }
@@ -24,6 +26,13 @@ fontFamily:'Inter-Bold',
     bookCard: {
       flex:1,
       paddingRight:20,
+
+    },
+    textWrap: {
+      flex:1,
+      flexWrap:"wrap",
+      width:150,
+      flexDirection:"row"
     },
 
 text: {
