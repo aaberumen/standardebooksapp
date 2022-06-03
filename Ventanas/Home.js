@@ -30,19 +30,19 @@ export default function Home({navigation}) {
      <Text style={styles.h2}>Recommended</Text>
      <View>
      <ScrollView nestedScrollEnabled={true} horizontal={true}>
-     <BookCard img={require('../src/imgs/L1.png')} title="The Picture of Dorian Grey" author="Oscar Wilde" year="1890" />
-     <BookCard img={require('../src/imgs/L2.png')} title="Metamorphosis" author="Franz Kakfa" year="1915" />
-     <BookCard img={require('../src/imgs/L3.png')} title="The Other Black Girl" author="Zayika D. Harris Peter" year="2021" />
+     <BookCard nav={() => navigation.navigate('Book')} img={require('../src/imgs/L1.png')} title="The Picture of Dorian Grey" author="Oscar Wilde" year="1890" />
+     <BookCard nav={() => navigation.navigate('Book')} img={require('../src/imgs/L2.png')} title="Metamorphosis" author="Franz Kakfa" year="1915" />
+     <BookCard nav={() => navigation.navigate('Book')} img={require('../src/imgs/L3.png')} title="The Other Black Girl" author="Zayika D. Harris Peter" year="2021" />
      </ScrollView>
      </View>
 
      <Text style={styles.h2}>New Releases</Text>
      <View>
      <ScrollView nestedScrollEnabled={true} horizontal={true}>
-     <BookCard img={require('../src/imgs/L6.png')} title="Atomic Habits" author="James Clear" year="2018" />
-     <BookCard img={require('../src/imgs/L7.png')} title="Donde los Árboles Cantan" author="Laura Gallego" year="2011" />
-     <BookCard img={require('../src/imgs/L8.png')} title="Little Women" author="Louisa May Alcott" year="1868" />
-     <BookCard img={require('../src/imgs/L9.png')} title="Pride and Prejudice" author="Jane Austen" year="1813" />
+     <BookCard nav={() => navigation.navigate('Book')} img={require('../src/imgs/L6.png')} title="Atomic Habits" author="James Clear" year="2018" />
+     <BookCard nav={() => navigation.navigate('Book')} img={require('../src/imgs/L7.png')} title="Donde los Árboles Cantan" author="Laura Gallego" year="2011" />
+     <BookCard nav={() => navigation.navigate('Book')} img={require('../src/imgs/L8.png')} title="Little Women" author="Louisa May Alcott" year="1868" />
+     <BookCard nav={() => navigation.navigate('Book')} img={require('../src/imgs/L9.png')} title="Pride and Prejudice" author="Jane Austen" year="1813" />
      </ScrollView>
      </View>
 

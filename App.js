@@ -10,6 +10,7 @@ import Sign_Up from './Ventanas/Sign_Up';
 import Home from './Ventanas/Home';
 import MyBooks from './Ventanas/MyBooks';
 import Fiction from './Ventanas/Fiction';
+import Book from './Ventanas/Book';
 import { render } from 'react-dom';
 import * as Font from "expo-font";
 import * as SplashScreen from 'expo-splash-screen';
@@ -106,6 +107,7 @@ function HomeStack() {
         <Stack.Screen options={{headerShown: false}} name="Home" component={Home} />
         <Stack.Screen name="Log In" component={Log_In} />
         <Stack.Screen name="Sign Up" component={Sign_Up} />
+        <Stack.Screen name="Book" component={Book} />
       </Stack.Navigator>
       )
 }
@@ -117,6 +119,7 @@ function SearchStack() {
       <Stack.Navigator initialRouteName="Search">
         <Stack.Screen options={{headerShown: false}} name="Search" component={Search} />
         <Stack.Screen name="Fiction" component={Fiction} />
+        <Stack.Screen name="Book" component={Book} />
       </Stack.Navigator>
   );
 }
@@ -128,6 +131,7 @@ function MyBooksStack() {
         <Stack.Screen options={{headerShown: false}} name="My Books" component={MyBooks} />
         <Stack.Screen name="Log In" component={Log_In} />
         <Stack.Screen name="Sign Up" component={Sign_Up} />
+        <Stack.Screen name="Book" component={Book} />
       </Stack.Navigator>
   );
 }

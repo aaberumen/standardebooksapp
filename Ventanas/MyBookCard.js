@@ -4,7 +4,24 @@ import { View, StyleSheet, Text, SafeAreaView, ScrollView, Image, TouchableHighl
 export const MyBookCard = (props) => {
   return (
     <View style={styles.myBookCard}>
+      <Pressable onPress={props.nav}>
     <Image source={props.img} style={{ width: 150, height: 203 }} />
+    </Pressable>
+    <View style ={styles.textWrap}>
+     <Text style={styles.h3}> {props.title}</Text>
+     <Text style={styles.text}> {props.author}</Text>
+     <Text style={styles.text}> {props.year}</Text>
+     </View>
+    </View>
+  );
+}
+
+export const MyBook = (props) => {
+  return (
+    <View style={styles.mybook}>
+      <Pressable onPress={props.nav}>
+    <Image source={props.img} style={{ width: 150, height: 203 }} />
+    </Pressable>
     <View style ={styles.textWrap}>
      <Text style={styles.h3}> {props.title}</Text>
      <Text style={styles.text}> {props.author}</Text>
@@ -31,6 +48,11 @@ fontFamily:'Inter-Bold',
       flexWrap:"wrap",
       width:150,
       flexDirection:"row"
+    },
+    mybook: {
+      justifyContent:"center",
+      alignItems: 'center',
+      padding:10,
     },
 
 text: {
