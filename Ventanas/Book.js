@@ -7,9 +7,9 @@ export default function Book({ navigation }) {
     return (
         <View style={styles.container}>
 
- 
 
-            <MyBook style={styles.myBookCard} img={require('../src/imgs/Classics.png')} />
+
+            <MyBook style={styles.myBookCard} img={require('../src/imgs/L2.png')} />
 
 
             <View style={styles.containerbook}>
@@ -24,19 +24,12 @@ export default function Book({ navigation }) {
 
 
 
-            <Text style={styles.titleText}>Moby Dick</Text>
-            <Text style={styles.subTitleText}>Herman Melville</Text>
-
-
-
-
-        
+            <Text style={styles.titleText}>Metamorphosis</Text>
+            <Text style={styles.subTitleText}>Franz Kakfa</Text>
 
 
             <Text style={styles.sinopsis}>SINOPSIS</Text>
-            <Text style={styles.sinopsistext}>“It is the horrible texture of a fabric that should be woven of ships’ cables and hawsers. A Polar wind blows through it, and birds of prey hover over it.”
-
-            ore than just a novel of adventure, more than an encyclopaedia of whaling lore and legend, the book can be seen as part of its author’s lifelong meditation on America. Written with wonderfully redemptive humour, Moby-Dick is also a profound inquiry into character, faith, and the nature of perception.</Text>
+            <Text style={styles.sinopsistext}>“Gregor Samsa, a traveling salesman living with his family in Prague, wakes up one day to find himself transformed, without rhyme or reason, into an indescribable creature. Understandably, Gregor Samsa's life changes abruptly and dramatically and the novel focuses in how this change affects the mind of the protagonist and the ones around him".</Text>
             <Pressable style={[styles.boton]}>
                 <Text style={[styles.btn_Download]}>Download</Text>
             </Pressable>
@@ -54,7 +47,7 @@ const styles = StyleSheet.create({
         paddingTop: '4%',
     },
     titleText: {
-        fontSize: 35,
+        fontSize: 30,
         color: 'black',
         marginBottom: 8, //MARGEN TITULO
         fontFamily: 'Ohno',
@@ -62,7 +55,7 @@ const styles = StyleSheet.create({
     },
     subTitleText:
     {
-        fontSize: 20,
+        fontSize: 18,
         color: 'black',
         fontFamily: 'Inter-Bold',
         alignSelf: 'center',
@@ -84,9 +77,9 @@ const styles = StyleSheet.create({
 
     },
     boton: {
-        height: 50,
-        width: '55%',
-        borderRadius: 20,
+        padding: 15,
+        width: '50%',
+        borderRadius: 50,
         borderWidth: 2,
         backgroundColor: '#FA784A',
         justifyContent: 'center',
@@ -94,24 +87,24 @@ const styles = StyleSheet.create({
         marginTop: 20, //MASMARGENJEJEJ
     },
     btn_Download: {
-        fontSize: 18,
-        lineHeight: 48,
+        fontSize: 14,
         textAlign: 'center',
         color: 'black',
         fontFamily: 'Inter',
+        justifyContent:'center',
     },
     boton_temas: {
         height: 35,
-        width: '30%',
+        width: '25%',
         borderRadius: 20,
         borderWidth: 2,
         backgroundColor: '#FFC600',
         marginHorizontal: '2%',
         marginTop: "2%",
+        justifyContent:'center',
     },
     btn_temas: {
-        fontSize: 14,
-        lineHeight: 34,
+        fontSize: 11,
         textAlign: 'center',
         color: 'black',
         fontFamily: 'Inter',
